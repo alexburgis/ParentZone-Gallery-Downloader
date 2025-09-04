@@ -1,6 +1,6 @@
-# ParentZone.me Gallery Downloader
+# ParentZone Gallery Downloader
 
-This tool helps you **save all of your child’s gallery photos from ParentZone.me** onto your own computer.
+This tool helps you **save all of your child’s gallery photos from ParentZone** onto your own computer.
 
 It has been written to be as easy as possible, even if you have never used Python before.
 
@@ -184,7 +184,19 @@ If some images fail:
 - **“python not recognised”** → Restart your computer, or try `python` instead of `python3`.
 - **Chrome doesn’t open** → Ensure Google Chrome is installed and up to date.
 - **Lots of 502/504 errors** → That’s the website being busy. Use `--retry-failed` later.
+- **Dates look wrong** → The script uses the `u=` timestamp in the image URL. Some images may not have it.
+
 ---
 
 ## ✅ You’re done!
+
+Next time, just:
+
+```bash
+cd path/to/ParentZone-Gallery-Downloader
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate    # Windows
+python3 downloader.py --lat <your-lat> --lon <your-lon>
+```
+
 Then log in, click a photo to open the lightbox, press Enter — and your photos will be saved.
